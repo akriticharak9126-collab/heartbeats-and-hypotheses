@@ -5,9 +5,12 @@ author: By Akriti Charak
 date: 2026-11-15T16:42:00.000+05:30
 image: /images/uploads/26321.jpg
 description: >-
-  By Karen N. Pelletreau et al. -
-  http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477, CC
-  BY 4.0, https://commons.wikimedia.org/w/index.php?curid=38619279
+  By Karen N. Pelletreau et al. - 
+
+  http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477, CC BY 4.0, 
+
+  https://commons.wikimedia.org/w/index.php?curid=38619279
+
 
   Elysia chlorotica - A photosynthetic sea slug
 ---
@@ -19,7 +22,11 @@ It sounds strange, doesn't it? An animal using sunlight in a way we usually asso
 
 But how does a sea slug manage to do something like this? The answer lies in something it takes from the algae it eats.
 
+
+
 ## A very unusual diet
+
+
 
 During the early stages of its life, *Elysia chlorotica* feeds on an alga called *Vaucheria litorea.* However, it does something quite different from most animals while feeding. Instead of completely digesting everything it consumes, it retains some of the alga's tiny structures called **chloroplasts**.
 
@@ -29,7 +36,11 @@ Interestingly, the sea slug stores these chloroplasts inside the cells lining it
 
 This phenomenon is known as **kleptoplasty**, which refers to the retention of plastids taken from another organism.
 
+
+
 ## An animal that makes use of sunlight!
+
+
 
 What makes this even more interesting is what happens after the slug takes in these chloroplasts.
 
@@ -41,7 +52,11 @@ However, this does not mean that the sea slug has become a plant. It still has t
 
 In a way, it has found an extraordinary way to make use of something that was originally part of its food!
 
+
+
 ## The puzzling question: How do the chloroplasts survive?
+
+
 
 One question makes this phenomenon particularly interesting for scientists: how can chloroplasts continue working inside an animal cell?
 
@@ -54,7 +69,11 @@ However, exactly how this remarkable process is sustained remains a subject of s
 
 Scientists are still trying to understand how these tiny structures manage to remain active for so long inside an animal.
 
+
+
 ## Nature doesn't always follow the textbook!
+
+
 
 The story of *Elysia chlorotica* is more than just an unusual discovery in zoology. It brings
 together several interesting areas of biology, including cell biology, genetics, evolution and biochemistry.
@@ -68,7 +87,11 @@ Something as small as a sea slug can teach us so much about how life adapts and 
 And if a tiny sea slug can surprise us with something like this, there must be many more
 fascinating adaptations in the natural world that we haven't discovered yet.
 
+
+
 ### References and further studies
+
+
 
 [Rumpho, M. E., et al. (2000). Solar-Powered Sea Slugs. Mollusc/Algal Chloroplast Symbiosis. Plant Physiology. ](https://doi.org/10.1104/pp.123.1.29)
 [National Geographic — The Sea Slug That Steals Genes From Algae. ](https://www.nationalgeographic.com/science/article/solar-powered-green-sea-slug-steals-ability-to-photosynthesise-from-algae)
