@@ -18,9 +18,19 @@ collections:
     format: frontmatter
     fields:
       - { label: Title, name: title, widget: string }
+
       - { label: Subtitle, name: subtitle, widget: string, required: false }
+
+      - { label: Category, name: category, widget: select, options: ["Marine Biology", "Neuroscience", "Genetics", "Ecology", "General Science"], default: "General Science" }
+
       - { label: Author, name: author, widget: string, default: "Akriti Charak" }
+
       - { label: Date, name: date, widget: datetime }
+
       - { label: Cover Image, name: image, widget: image, required: false }
+
       - { label: Description, name: description, widget: text }
+
+      - { label: References, name: references, widget: list, required: false }
+
       - { label: Body, name: body, widget: markdown }
