@@ -1,0 +1,26 @@
+
+backend:
+  name: turbo-github
+  turbo_site_id: cd280f91-5535-4d5d-aabb-cb434a7cd274
+  branch: main
+
+site_url: https://heartbeats-and-hypotheses.netlify.app
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: articles
+    label: Articles
+    folder: articles
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Author, name: author, widget: string, default: "Akriti Charak" }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Cover Image, name: image, widget: image, required: false }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
