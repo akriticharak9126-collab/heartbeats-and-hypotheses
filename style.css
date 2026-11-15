@@ -1,18 +1,13 @@
-
-/* HEARTBEATS & HYPOTHESES
-   An independent science journal
-   Design by Akriti Charak
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-    --cream: #F8F6F0;
-    --green: #263F35;
-    --dark: #1E2D26;
-    --gold: #B39461;
-    --muted: #77796F;
-    --white: #FFFFFF;
+    --cream: #f7f4eb;
+    --paper: #eee9dc;
+    --green: #243c32;
+    --deep: #172b24;
+    --gold: #ad8951;
+    --ink: #292d28;
+    --muted: #77786d;
 }
 
 * {
@@ -27,199 +22,437 @@ html {
 
 body {
     background: var(--cream);
-    color: var(--dark);
+    color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     line-height: 1.7;
 }
 
-/* HEADER */
-
-header {
-    padding: 25px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 1px solid #DEDACE;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-header h1 {
+img {
+    display: block;
+    width: 100%;
+}
+
+/* HEADER */
+
+.site-header {
+    min-height: 125px;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    background: var(--cream);
+}
+
+.brand h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: clamp(25px, 3vw, 37px);
+    line-height: 1.2;
+}
+
+.brand h1 span {
+    color: var(--gold);
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.site-header nav a {
+    font-size: 13px;
+    color: var(--green);
+    transition: color .2s;
+}
+
+.site-header nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    padding: 90px 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15,35,29,.88), rgba(15,35,29,.28)),
+        url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1800&q=90')
+        center 55% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 670px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 500;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 520px;
+    color: #eee9dc;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-link {
+    display: inline-block;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--gold);
+    color: white;
+}
+
+.hero-note {
+    position: absolute;
+    bottom: 25px;
+    right: 7%;
+    color: #eee9dc;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about-content h2,
+.newsletter-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 47px);
+    font-weight: 500;
+    color: var(--green);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+/* DISCOVER */
+
+.discover-section,
+.journal-section {
+    padding: 90px 8%;
+}
+
+.discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.discovery-card {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    color: white;
+    background: var(--green);
+}
+
+.discovery-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 35%, rgba(0,0,0,.78));
+}
+
+.discovery-card img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+
+.discovery-card:hover img {
+    transform: scale(1.07);
+}
+
+.discovery-card span,
+.discovery-card h3 {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+}
+
+.discovery-card span {
+    bottom: 75px;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.discovery-card h3 {
+    bottom: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* JOURNAL */
+
+.journal-section {
+    background: var(--paper);
+}
+
+#article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.journal-card {
+    padding: 25px;
+    background: var(--cream);
+    border: 1px solid #e3dece;
+}
+
+.journal-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.journal-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 25px;
     color: var(--green);
 }
 
-header p {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--green);
-    font-size: 13px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
+.journal-card a {
+    display: inline-block;
     color: var(--gold);
+    margin-top: 15px;
 }
 
-/* HERO SECTION */
+/* THOUGHT */
 
-.hero {
+.thought-section {
+    text-align: center;
+    padding: 85px 12%;
     background: var(--green);
     color: var(--cream);
-    padding: 110px 10%;
-    text-align: center;
 }
 
-.hero > p:first-child {
-    color: #D6C09B;
-    letter-spacing: 4px;
-    font-size: 11px;
-    margin-bottom: 25px;
-}
-
-.hero h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 6vw, 65px);
-    font-weight: 400;
-    line-height: 1.2;
+.thought-section blockquote {
     max-width: 850px;
-    margin: 0 auto 25px;
-}
-
-.hero p {
-    color: #E0E1D9;
-    margin-bottom: 30px;
-}
-
-.hero a {
-    display: inline-block;
-    color: var(--cream);
-    text-decoration: none;
-    border-bottom: 1px solid var(--gold);
-    padding-bottom: 5px;
-}
-
-/* JOURNAL */
-
-#journal {
-    padding: 85px 10%;
-}
-
-#journal h2,
-#about h2 {
+    margin: auto;
     font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    color: var(--green);
-    margin-bottom: 35px;
+    font-size: clamp(27px, 4vw, 43px);
+    line-height: 1.35;
 }
 
-article {
-    background: var(--white);
-    padding: 35px;
-    border: 1px solid #E8E3D8;
-    max-width: 750px;
-    transition: transform 0.3s;
-}
-
-article:hover {
-    transform: translateY(-4px);
-}
-
-article > p:first-child {
-    color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-article h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    color: var(--green);
-    margin: 12px 0;
-}
-
-article a {
-    display: inline-block;
+.thought-section > p:last-child {
     margin-top: 20px;
-    color: var(--green);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid var(--gold);
+    color: #d6c4a0;
 }
 
 /* ABOUT */
 
-#about {
-    padding: 75px 10%;
-    background: #EEECE3;
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+    padding: 100px 10%;
 }
 
-#about p {
-    max-width: 700px;
-    margin-bottom: 15px;
-    color: #55594F;
+.about-image img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--gold);
+    margin: 20px 0;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    color: #62645b;
+}
+
+/* NEWSLETTER */
+
+.newsletter-section {
+    text-align: center;
+    padding: 85px 10%;
+    background: #e9e4d6;
+}
+
+.newsletter-section > p:not(.eyebrow) {
+    max-width: 580px;
+    margin: 15px auto 30px;
+    color: var(--muted);
+}
+
+.newsletter-form {
+    max-width: 540px;
+    margin: auto;
+    text-align: left;
+}
+
+.newsletter-form label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.newsletter-input {
+    display: flex;
+    border: 1px solid #c9c1ad;
+    background: var(--cream);
+}
+
+.newsletter-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font: inherit;
+}
+
+.newsletter-input button {
+    padding: 15px 22px;
+    border: 0;
+    background: var(--green);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+#newsletter-message {
+    font-size: 11px;
+    margin-top: 12px;
 }
 
 /* FOOTER */
 
-footer {
-    background: var(--green);
-    color: var(--cream);
-    padding: 45px 10%;
+.site-footer {
+    padding: 55px 8%;
     text-align: center;
+    background: var(--deep);
+    color: var(--cream);
 }
 
-footer h2 {
+.site-footer h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 27px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
-footer p {
-    color: #D6C09B;
+.site-footer p {
+    margin: 8px 0;
+    color: #c9c9bd;
     font-size: 13px;
-    margin: 5px;
 }
 
-/* MOBILE RESPONSIVENESS */
+.site-footer a {
+    color: #d6b982;
+}
 
-@media (max-width: 600px) {
+/* MOBILE */
 
-    header {
-        flex-direction: column;
+@media (max-width: 850px) {
+    .discovery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 380px;
+    }
+}
+
+@media (max-width: 550px) {
+    .site-header {
+        justify-content: center;
         text-align: center;
     }
 
-    nav {
+    .site-header nav {
         justify-content: center;
-        gap: 15px;
+        gap: 12px 18px;
     }
 
     .hero {
-        padding: 75px 7%;
+        min-height: 530px;
+        padding: 65px 8%;
     }
 
-    #journal,
-    #about {
-        padding: 55px 7%;
+    .hero-note {
+        right: 8%;
     }
 
-    article {
-        padding: 25px;
+    .discovery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
-    article h3 {
-        font-size: 25px;
+    .discovery-card {
+        height: 250px;
+    }
+
+    .discovery-card h3 {
+        font-size: 18px;
+        left: 12px;
+    }
+
+    .discovery-card span {
+        left: 12px;
+        font-size: 8px;
+    }
+
+    .discover-section,
+    .journal-section {
+        padding: 65px 6%;
+    }
+
+    .about-section {
+        padding: 65px 7%;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
     }
 }
