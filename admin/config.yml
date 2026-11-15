@@ -4,7 +4,7 @@ backend:
   turbo_site_id: cd280f91-5535-4d5d-aabb-cb434a7cd274
   branch: main
 
-site_url:https://heartbeats-and-hypotheses-trfy-38eshvmx3.vercel.app
+site_url: https://heartbeats-and-hypotheses-trfy-38eshvmx3.vercel.app
 media_folder: images/uploads
 public_folder: /images/uploads
 
