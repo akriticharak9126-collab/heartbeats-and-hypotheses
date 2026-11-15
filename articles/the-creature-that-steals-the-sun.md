@@ -3,7 +3,7 @@ title: THE CREATURE THAT STEALS THE SUN
 subtitle: ""
 author: By Akriti Charak
 date: 2026-11-15T16:42:00.000+05:30
-image: ""
+image: /images/uploads/26321.jpg
 description: Elysia chlorotica - A photosynthetic sea slug
 ---
 ## A little creature with a surprising secret
