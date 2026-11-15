@@ -38,8 +38,16 @@ const articles = files.map(file => {
   new Date(b.date || 0) - new Date(a.date || 0)
 );
 
+
 const cards = articles.map(article => `
   <article class="journal-card">
+    ${article.image ? `
+      <img
+        src="${escapeHTML(article.image)}"
+        alt="${escapeHTML(article.title || "Article cover")}"
+        loading="lazy"
+      >
+    ` : ""}
     <p>${escapeHTML(article.author || "Akriti Charak")}</p>
     <h3>${escapeHTML(article.title || article.slug)}</h3>
     <p>${escapeHTML(article.description || article.subtitle || "")}</p>
@@ -48,6 +56,7 @@ const cards = articles.map(article => `
     </a>
   </article>
 `).join("\n");
+
 
 let homepage = fs.readFileSync(homepagePath, "utf8");
 
