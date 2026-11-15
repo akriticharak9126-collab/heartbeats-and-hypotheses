@@ -4,7 +4,12 @@ subtitle: ""
 author: By Akriti Charak
 date: 2026-11-15T16:42:00.000+05:30
 image: /images/uploads/26321.jpg
-description: Elysia chlorotica - A photosynthetic sea slug
+description: >-
+  By Karen N. Pelletreau et al. -
+  http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477, CC
+  BY 4.0, https://commons.wikimedia.org/w/index.php?curid=38619279
+
+  Elysia chlorotica - A photosynthetic sea slug
 ---
 ## A little creature with a surprising secret
 
