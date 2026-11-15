@@ -105,5 +105,26 @@ for (const article of articles) {
 
   fs.writeFileSync(path.join(pageDir, "index.html"), html);
 }
+// Generate XML sitemap
+const siteUrl = "https://heartbeats-and-hypotheses-trfy.vercel.app";
 
+const sitemapUrls = [
+  `${siteUrl}/`,
+  ...articles.map(article =>
+    `${siteUrl}/articles/${encodeURIComponent(article.slug)}/`
+  )
+];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(url => `<url><loc>${url}</loc></url>`).join("\n")}
+</urlset>`;
+
+fs.writeFileSync(
+  path.join(root, "sitemap.xml"),
+  sitemap,
+  "utf8"
+);
+
+console.log("Sitemap generated successfully!");
 console.log(`Built ${articles.length} article(s).`);
