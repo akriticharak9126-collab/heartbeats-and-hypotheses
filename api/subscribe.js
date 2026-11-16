@@ -18,20 +18,20 @@ export default async function handler(req, res) {
 
     const supabaseUrl = process.env.SUPABASE_URL;
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const resendKey = process.env.RESEND_API_KEY;
 
-    if (!supabaseUrl || !supabaseKey) {
-      console.error("Missing Supabase environment variables.");
+    if (!supabaseUrl || !supabaseKey || !resendKey) {
+      console.error("Missing environment variables.");
       return res.status(500).json({
         error: "Server configuration is incomplete."
       });
     }
 
     const normalizedEmail = email.trim().toLowerCase();
+    const cleanUrl = supabaseUrl.trim().replace(/\/+$/, "");
 
-    const cleanSupabaseUrl = supabaseUrl.trim().replace(/\/+$/, "");
-
-const response = await fetch(
-  `${cleanSupabaseUrl}/rest/v1/newsletter_subscribers`,
+    const response = await fetch(
+      `${cleanUrl}/rest/v1/newsletter_subscribers`,
       {
         method: "POST",
         headers: {
@@ -40,9 +40,7 @@ const response = await fetch(
           "Authorization": `Bearer ${supabaseKey}`,
           "Prefer": "return=minimal"
         },
-        body: JSON.stringify({
-          email: normalizedEmail
-        })
+        body: JSON.stringify({ email: normalizedEmail })
       }
     );
 
@@ -59,6 +57,39 @@ const response = await fetch(
       return res.status(500).json({
         error: "Database error. Please try again later."
       });
+    }
+
+    // Notify the website owner
+    try {
+      const mailResponse = await fetch(
+        "https://api.resend.com/emails",
+        {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${resendKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: "Heartbeats & Hypotheses <onboarding@resend.dev>",
+            to: ["akriticharak9126@gmail.com"],
+            subject: "New newsletter subscriber!",
+            html: `
+              <h2>You have a new subscriber!</h2>
+              <p><strong>Email:</strong> ${normalizedEmail}</p>
+              <p>They just subscribed to Heartbeats & Hypotheses.</p>
+            `
+          })
+        }
+      );
+
+      if (!mailResponse.ok) {
+        console.error(
+          "Resend notification error:",
+          await mailResponse.text()
+        );
+      }
+    } catch (mailError) {
+      console.error("Notification failed:", mailError.message);
     }
 
     return res.status(200).json({
