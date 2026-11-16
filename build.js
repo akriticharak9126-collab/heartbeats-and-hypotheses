@@ -17,6 +17,15 @@ function escapeHTML(value = "") {
     "'": "&#39;"
   })[char]);
 }
+function escapeXML(value = "") {
+  return String(value).replace(/[<>&'"]/g, char => ({
+    "<": "&lt;",
+    ">": "&gt;",
+    "&": "&amp;",
+    "'": "&apos;",
+    '"': "&quot;"
+  })[char]);
+}
 
 if (!fs.existsSync(articlesDir)) {
   console.log("No articles folder found.");
@@ -127,4 +136,49 @@ fs.writeFileSync(
 );
 
 console.log("Sitemap generated successfully!");
+// Generate RSS feed for newsletter automation
+
+const rssItems = articles.map(article => {
+  const articleUrl =
+    `${siteUrl}/articles/${encodeURIComponent(article.slug)}/`;
+
+  const pubDate = article.date
+    ? new Date(article.date)
+    : null;
+
+  const validDate = pubDate && !isNaN(pubDate.getTime());
+
+  return `
+    <item>
+      <title>${escapeXML(article.title || article.slug)}</title>
+      <link>${escapeXML(articleUrl)}</link>
+      <guid isPermaLink="true">${escapeXML(articleUrl)}</guid>
+      <description>${escapeXML(
+        article.description || article.subtitle || ""
+      )}</description>
+      <author>${escapeXML(article.author || "Akriti Charak")}</author>
+      ${validDate ? `<pubDate>${pubDate.toUTCString()}</pubDate>` : ""}
+    </item>
+  `;
+}).join("\n");
+
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Heartbeats &amp; Hypotheses</title>
+    <link>${siteUrl}</link>
+    <description>Where science meets the human experience.</description>
+    <language>en-us</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    ${rssItems}
+  </channel>
+</rss>`;
+
+fs.writeFileSync(
+  path.join(root, "rss.xml"),
+  rss,
+  "utf8"
+);
+
+console.log("RSS feed generated successfully!");
 console.log(`Built ${articles.length} article(s).`);
