@@ -28,8 +28,8 @@ function escapeXML(value = "") {
 }
 
 if (!fs.existsSync(articlesDir)) {
-  console.log("No articles folder found.");
-  process.exit(0);
+  fs.mkdirSync(articlesDir, { recursive: true });
+  console.log("Created empty articles folder.");
 }
 
 const files = fs.readdirSync(articlesDir)
