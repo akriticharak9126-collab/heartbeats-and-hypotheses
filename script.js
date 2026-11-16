@@ -3,7 +3,6 @@
    Interactive website features
 */
 
-// Welcome message
 console.log("Welcome to Heartbeats & Hypotheses!");
 
 // Automatically update copyright year
@@ -13,7 +12,7 @@ if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-// Create reading progress bar
+// Reading progress bar
 const progressBar = document.createElement("div");
 
 progressBar.style.position = "fixed";
@@ -27,9 +26,7 @@ progressBar.style.transition = "width 0.1s linear";
 
 document.body.appendChild(progressBar);
 
-// Update progress while scrolling
 window.addEventListener("scroll", () => {
-
     const scrollable =
         document.documentElement.scrollHeight - window.innerHeight;
 
@@ -42,24 +39,64 @@ window.addEventListener("scroll", () => {
 
 // Smooth navigation
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-
     link.addEventListener("click", event => {
-
         const target = document.querySelector(
             link.getAttribute("href")
         );
 
         if (target) {
             event.preventDefault();
-
             target.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
         }
-
     });
-
 });
+
+// Newsletter subscription
+const newsletterForm = document.querySelector("#newsletter-form");
+const newsletterMessage = document.querySelector("#newsletter-message");
+
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", async event => {
+        event.preventDefault();
+
+        const emailInput = document.querySelector("#subscriber-email");
+        const button = newsletterForm.querySelector("button");
+        const email = emailInput.value.trim();
+
+        button.disabled = true;
+        button.textContent = "Please wait...";
+
+        newsletterMessage.textContent = "Adding your subscription...";
+
+        try {
+            const response = await fetch("/api/subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Subscription failed.");
+            }
+
+            newsletterMessage.textContent = result.message;
+            newsletterForm.reset();
+
+        } catch (error) {
+            newsletterMessage.textContent = error.message ||
+                "Something went wrong. Please try again.";
+        } finally {
+            button.disabled = false;
+            button.textContent = "Subscribe →";
+        }
+    });
+}
 
 console.log("Your journal is ready to explore.");
