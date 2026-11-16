@@ -28,8 +28,10 @@ export default async function handler(req, res) {
 
     const normalizedEmail = email.trim().toLowerCase();
 
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/newsletter_subscribers`,
+    const cleanSupabaseUrl = supabaseUrl.trim().replace(/\/+$/, "");
+
+const response = await fetch(
+  `${cleanSupabaseUrl}/rest/v1/newsletter_subscribers`,
       {
         method: "POST",
         headers: {
