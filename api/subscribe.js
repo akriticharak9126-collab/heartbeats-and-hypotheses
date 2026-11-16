@@ -11,22 +11,36 @@ export default async function handler(req, res) {
       typeof email !== "string" ||
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
     ) {
-      return res.status(400).json({ error: "Please enter a valid email address." });
+      return res.status(400).json({
+        error: "Please enter a valid email address."
+      });
+    }
+
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      console.error("Missing Supabase environment variables.");
+      return res.status(500).json({
+        error: "Server configuration is incomplete."
+      });
     }
 
     const normalizedEmail = email.trim().toLowerCase();
 
     const response = await fetch(
-      `${process.env.SUPABASE_URL}/rest/v1/newsletter_subscribers`,
+      `${supabaseUrl}/rest/v1/newsletter_subscribers`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "apikey": process.env.SUPABASE_SERVICE_ROLE_KEY,
-          "Authorization": `Bearer ${process.env.SUPABASE_SERVICE_ROLE_KEY}`,
+          "apikey": supabaseKey,
+          "Authorization": `Bearer ${supabaseKey}`,
           "Prefer": "return=minimal"
         },
-        body: JSON.stringify({ email: normalizedEmail })
+        body: JSON.stringify({
+          email: normalizedEmail
+        })
       }
     );
 
@@ -37,7 +51,12 @@ export default async function handler(req, res) {
     }
 
     if (!response.ok) {
-      throw new Error("Database request failed.");
+      const details = await response.text();
+      console.error("Supabase error:", response.status, details);
+
+      return res.status(500).json({
+        error: "Database error. Please try again later."
+      });
     }
 
     return res.status(200).json({
@@ -46,9 +65,9 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error("Newsletter signup error:", error.message);
+
     return res.status(500).json({
       error: "Something went wrong. Please try again later."
     });
   }
 }
- 
