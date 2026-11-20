@@ -4,7 +4,7 @@ subtitle: Rethinking what conservation should really mean.
 category: Ecology
 author: Akriti Charak
 date: 2026-11-21T01:31:00.000+05:30
-image: ""
+image: /images/uploads/26927.jpg
 description: I saw a bear growling in its enclosure at Manda Zoo and couldn’t
   stop asking whether we can really call this protection. This article follows
   the science on stereotypy, enrichment, captive breeding and reintroduction. My
