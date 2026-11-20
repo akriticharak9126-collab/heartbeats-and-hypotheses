@@ -180,7 +180,7 @@ We can't undo every consequence of human activity, but we can rethink how we res
 
 The greatest achievement of conservation wouldn't be a world where every endangered animal has a place behind an enclosure. It would be a world where fewer animals need to be kept there in the first place.
 
-###### References
+#### References
 
 1. Clubb, R. and Mason, G. (2007). Natural behavioural biology as a risk factor in carnivore welfare: how analysing species differences could help zoos improve enclosures. Applied Animal Behaviour Science, 102, 303–328. [Link](http://hdl.handle.net/10214/4732)
 2. Cole, J. and Fraser, D. (2018). Zoo animal welfare: the human dimension. Journal of Applied Animal Welfare Science, 21(sup1), 49–58. <https://doi.org/10.1080/10888705.2018.1513839>
