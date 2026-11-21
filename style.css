@@ -1768,3 +1768,75 @@ a {
     transition: background 0.4s ease;
 }
 
+/* =========================================
+   HERO IMAGE — SINGLE IMAGE EDITORIAL STYLE
+========================================= */
+
+/* Remove both overlapping photographs */
+.hero-image-small,
+.hero-image-detail {
+    display: none !important;
+}
+
+/* Keep only the main centre photograph */
+.hero-artwork {
+    position: relative;
+    min-height: 490px;
+    isolation: isolate;
+}
+
+.hero-image-main {
+    display: block !important;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    right: auto;
+    width: 82%;
+    height: 82%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 48% 48% 4px 4px;
+    box-shadow: 0 18px 40px rgba(38,33,32,.13);
+    z-index: 1;
+}
+
+.hero-image-main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keep the editorial caption */
+.hero-art-caption {
+    position: absolute;
+    right: 2%;
+    bottom: 1%;
+    z-index: 4;
+}
+
+/* Keep the figure number visible */
+.artwork-number {
+    z-index: 3;
+}
+
+/* Mobile adjustment */
+@media (max-width: 650px) {
+    .hero-artwork {
+        min-height: 340px;
+    }
+
+    .hero-image-main {
+        top: 4%;
+        left: 50%;
+        width: 84%;
+        height: 82%;
+        transform: translateX(-50%);
+    }
+
+    .hero-art-caption {
+        right: 0;
+        bottom: 0;
+    }
+}
+
