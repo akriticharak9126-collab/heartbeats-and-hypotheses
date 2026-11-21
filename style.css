@@ -1548,3 +1548,125 @@ a {
     }
 
 }
+/* =================================
+   HEARTBEATS & HYPOTHESES
+   COLOUR EXPANSION
+================================= */
+
+:root {
+  --burgundy: #823C49;
+  --blue: #3449A1;
+  --lime: #B8C96A;
+  --terracotta: #D58A68;
+  --butter: #D9C58C;
+  --sage: #5B705A;
+}
+
+/* Intro strip */
+.intro-strip {
+  background: #EAE1D5;
+  border-top: 1px solid #D9CFC1;
+  border-bottom: 1px solid #D9CFC1;
+}
+
+/* Discover section */
+.editorial-discover {
+  background: #E9E1D5;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.discovery-card:nth-child(1) {
+  background: #5B705A;
+}
+
+.discovery-card:nth-child(2) {
+  background: #823C49;
+}
+
+.discovery-card:nth-child(3) {
+  background: #3449A1;
+}
+
+.discovery-card:nth-child(4) {
+  background: #D58A68;
+}
+
+/* Journal section */
+.editorial-journal {
+  background: #F4EFE7;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.journal-card {
+  background: #EAE1D5;
+  border: 1px solid #D9CFC1;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.journal-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Thought section */
+.editorial-thought {
+  background: #823C49;
+  color: #F4EFE7;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.editorial-thought h2,
+.editorial-thought p {
+  color: #F4EFE7;
+}
+
+/* About section */
+.editorial-about {
+  background: #E1E8DA;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Newsletter */
+.editorial-newsletter {
+  background: #E9D9B8;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/* Footer */
+.editorial-footer {
+  background: #262120;
+  color: #F4EFE7;
+}
+
+.editorial-footer a {
+  color: #D9C58C;
+}
+
+/* Little editorial details */
+.hero-title-area h1 span {
+  color: #823C49;
+}
+
+.hero-link {
+  border-color: #823C49;
+  color: #823C49;
+}
+
+.artwork-number {
+  color: #3449A1;
+}
+
+.artwork-note {
+  color: #823C49;
+}
+
+/* Selection colour */
+::selection {
+  background: #823C49;
+  color: #F4EFE7;
+}
