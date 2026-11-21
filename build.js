@@ -121,11 +121,10 @@ const html = `<!DOCTYPE html>
 
       <h1>${title}</h1>
 
-      ${description ? `<p class="article-subtitle">${description}</p>` : ""}
-
+      ${description ? "<p class=\"article-subtitle\">" + description + "</p>" : ""}
       <div class="article-meta">
         <span>By ${escapeHTML(article.author || "Akriti Charak")}</span>
-        ${article.date ? `<span>${escapeHTML(article.date)}</span>` : ""}
+        ${article.date ? "<span>" + escapeHTML(article.date) + "</span>" : ""}
       </div>
     </header>
 
