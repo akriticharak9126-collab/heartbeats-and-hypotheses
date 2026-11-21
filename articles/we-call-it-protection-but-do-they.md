@@ -5,13 +5,14 @@ category: Ecology
 author: Akriti Charak
 date: 2026-11-21T01:31:00.000+05:30
 image: /images/uploads/26927.jpg
-description: >-
-  Photo: "Wojtekzoo.jpg" by Historicaliz, via Wikimedia Commons (wikimedia.org),
-  licensed under CC BY-SA 4.0 (creativecommons.org).
-
-
-  I saw a bear growling in its enclosure at Manda Zoo and couldn’t stop asking whether we can really call this protection. This article follows the science on stereotypy, enrichment, captive breeding and reintroduction. My first answer turned out to be more complicated than I expected.
+description: I saw a bear growling in its enclosure at Manda Zoo and couldn’t
+  stop asking whether we can really call this protection. This article follows
+  the science on stereotypy, enrichment, captive breeding and reintroduction. My
+  first answer turned out to be more complicated than I expected.
 ---
+###### *Photo: "[Wojtekzoo.jpg](https://www.google.com/url?sa=i&source=web&rct=j&url=https://commons.wikimedia.org/wiki/File:Wojtekzoo.jpg&ved=2ahUKEwiU9uGxmpiYAxWfXGwGHd0ZN9UQy_kOegYIAAgYEAI&opi=89978449&cd&psig=AOvVaw3guhr7wFHVlbb5mWvm9Lal&ust=1795321093980000)" by Historicaliz, via Wikimedia Commons, licensed under [CC BY-SA 4.0](https://www.google.com/url?sa=i&source=web&rct=j&url=https://creativecommons.org/licenses/by-sa/4.0/&ved=2ahUKEwiU9uGxmpiYAxWfXGwGHd0ZN9UQy_kOegYIAAgYEAM&opi=89978449&cd&psig=AOvVaw3guhr7wFHVlbb5mWvm9Lal&ust=1795321093980000).*
+
+
 # We Said We Were Saving Them
 
 I visited Manda Zoo and saw a bear growling, confined to the space it had been given. I can't say what that growl meant, and as you'll see, the science of reading an animal's state is less simple than it looks. But I remember standing there and feeling empathy for him. He was away from his home in the jungle, and I thought of what I had read in school: that wild animals are supposed to be in the wild, and free. I didn't yet have the words for what was bothering me. I have a few more of them now, which is partly why I'm writing this.
