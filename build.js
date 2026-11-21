@@ -86,7 +86,8 @@ for (const article of articles) {
     ? `<img src="../../${escapeHTML(article.image)}" alt="${title}" style="max-width:100%;border-radius:12px;">`
     : "";
 
-  const html = `<!DOCTYPE html>
+  
+const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -95,22 +96,61 @@ for (const article of articles) {
   <title>${title} | Heartbeats & Hypotheses</title>
   <link rel="stylesheet" href="../../style.css">
 </head>
-<body>
-  <header>
-    <h1><a href="/" style="color:inherit;text-decoration:none;">Heartbeats & Hypotheses</a></h1>
+<body class="article-page">
+
+  <header class="article-site-header">
+    <a href="/" class="article-brand">
+      Heartbeats <span>&</span> Hypotheses
+    </a>
     <p>Where science meets the human experience.</p>
-    <nav><a href="/">Home</a> <a href="/#journal">Journal</a> <a href="/#about">About Me</a></nav>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#journal">Journal</a>
+      <a href="/#about">About Me</a>
+    </nav>
   </header>
-  <main style="max-width:850px;margin:40px auto;padding:20px;">
-    <p>${escapeHTML(article.author || "Akriti Charak")}</p>
-    <h1>${title}</h1>
-    <p>${description}</p>
-    ${image}
-    <article>${marked.parse(article.body || "")}</article>
-    <p><a href="/#journal">← Back to the journal</a></p>
+
+  <main class="article-container">
+
+    <a href="/#journal" class="article-back">
+      ← Back to the journal
+    </a>
+
+    <header class="article-heading">
+      <p class="article-kicker">HEARTBEATS & HYPOTHESES · JOURNAL</p>
+
+      <h1>${title}</h1>
+
+      ${description ? `<p class="article-subtitle">${description}</p>` : ""}
+
+      <div class="article-meta">
+        <span>By ${escapeHTML(article.author || "Akriti Charak")}</span>
+        ${article.date ? `<span>${escapeHTML(article.date)}</span>` : ""}
+      </div>
+    </header>
+
+    ${image ? `<div class="article-cover">${image}</div>` : ""}
+
+    <article class="article-body">
+      ${marked.parse(article.body || "")}
+    </article>
+
+    <footer class="article-ending">
+      <span>—</span>
+      <p>Thank you for being curious.</p>
+      <a href="/#journal">Explore more stories →</a>
+    </footer>
+
   </main>
+
+  <footer class="article-footer">
+    <p>Heartbeats & Hypotheses</p>
+    <span>Where science meets the human experience.</span>
+  </footer>
+
 </body>
 </html>`;
+
 
   fs.writeFileSync(path.join(pageDir, "index.html"), html);
 }
