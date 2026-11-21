@@ -5,10 +5,12 @@ category: Ecology
 author: Akriti Charak
 date: 2026-11-21T01:31:00.000+05:30
 image: /images/uploads/26927.jpg
-description: I saw a bear growling in its enclosure at Manda Zoo and couldn’t
-  stop asking whether we can really call this protection. This article follows
-  the science on stereotypy, enrichment, captive breeding and reintroduction. My
-  first answer turned out to be more complicated than I expected.
+description: >-
+  Photo: "Wojtekzoo.jpg" by Historicaliz, via Wikimedia Commons (wikimedia.org),
+  licensed under CC BY-SA 4.0 (creativecommons.org).
+
+
+  I saw a bear growling in its enclosure at Manda Zoo and couldn’t stop asking whether we can really call this protection. This article follows the science on stereotypy, enrichment, captive breeding and reintroduction. My first answer turned out to be more complicated than I expected.
 ---
 # We Said We Were Saving Them
 
