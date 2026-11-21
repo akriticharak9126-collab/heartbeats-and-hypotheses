@@ -456,3 +456,17 @@ img {
         flex-direction: column;
     }
 }
+/* BLUE ARTICLE HYPERLINKS */
+article a {
+    color: #0000EE;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+article a:visited {
+    color: #551A8B;
+}
+
+article a:hover {
+    color: #0000CC;
+}
