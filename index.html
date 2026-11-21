@@ -11,14 +11,21 @@
 
     <title>Heartbeats & Hypotheses — An Independent Journal</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
     <meta name="google-site-verification" content="VNX7efo185MJKo_JoTIwdVFblDouS0Gi6DVWFBqN3q8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header id="home" class="site-header editorial-header">
+
     <a class="brand" href="#home">
         <span class="brand-mark">H&H.</span>
         <span class="brand-subtitle">AN INDEPENDENT JOURNAL</span>
@@ -31,11 +38,13 @@
         <a href="#newsletter">Letters</a>
         <a href="/admin/">Author Studio ↗</a>
     </nav>
+
 </header>
+
 
 <main>
 
-    <!-- EDITORIAL HERO -->
+    <!-- HERO -->
 
     <section class="editorial-hero">
 
@@ -47,6 +56,7 @@
         <div class="hero-main">
 
             <div class="hero-title-area">
+
                 <p class="eyebrow">A JOURNAL FOR THE CURIOUS</p>
 
                 <h1>
@@ -55,8 +65,11 @@
                     HYPOTHESES<span class="full-stop">.</span>
                 </h1>
 
-                <p class="hero-manifesto">
+                <p class="hero-subtitle">
                     Science is never just science.
+                </p>
+
+                <p class="hero-manifesto">
                     It's about the lives we touch, the worlds we discover,
                     and the questions that change how we see everything.
                 </p>
@@ -64,28 +77,50 @@
                 <a class="hero-link" href="#journal">
                     ENTER THE JOURNAL <span>↗</span>
                 </a>
+
             </div>
 
+
+            <!-- ARTISTIC IMAGE COLLAGE -->
+
             <div class="hero-artwork">
+
+                <div class="hero-art-circle"></div>
+
                 <div class="hero-image-main">
                     <img
-                        src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1200&q=90"
-                        alt="Wildlife moving through a forest"
+                        src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1400&q=90"
+                        alt="Wild deer in a forest landscape"
+                        fetchpriority="high"
                     >
                 </div>
 
                 <div class="hero-image-small">
                     <img
-                        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=85"
-                        alt="Scientific laboratory glassware"
+                        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700&q=90"
+                        alt="Scientific glassware in a laboratory"
+                        loading="lazy"
                     >
                 </div>
 
-                <span class="artwork-note">OBSERVE. WONDER. QUESTION.</span>
+                <div class="hero-image-detail">
+                    <img
+                        src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&q=85"
+                        alt="A colourful nebula in deep space"
+                        loading="lazy"
+                    >
+                </div>
+
+                <span class="hero-art-caption">
+                    OBSERVE. WONDER. QUESTION.
+                </span>
+
                 <span class="artwork-number">FIG. 001</span>
+
             </div>
 
         </div>
+
 
         <div class="hero-bottomline">
             <span>WHERE SCIENCE MEETS THE HUMAN EXPERIENCE.</span>
@@ -95,9 +130,10 @@
     </section>
 
 
-    <!-- EDITORIAL INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
     <section class="intro-strip">
+
         <span class="intro-number">01 / THE IDEA</span>
 
         <p>
@@ -106,6 +142,7 @@
         </p>
 
         <span class="intro-signature">Stay curious.</span>
+
     </section>
 
 
@@ -114,57 +151,104 @@
     <section id="discover" class="discover-section editorial-discover">
 
         <div class="section-heading editorial-heading">
+
             <div>
                 <p class="eyebrow">A MAP OF CURIOSITY · 001—004</p>
-                <h2>There is more than<br>one way to wonder.</h2>
+
+                <h2>
+                    There is more than<br>
+                    one way to <em>wonder.</em>
+                </h2>
             </div>
 
             <p class="section-description">
                 Four directions. Countless questions.
                 No particular order of discovery.
             </p>
+
         </div>
+
 
         <div class="discovery-grid editorial-grid">
 
+
+            <!-- NATURE -->
+
             <a class="discovery-card nature" href="#journal">
+
                 <img
-                    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1000&q=85"
-                    alt="Wild deer in a forest"
+                    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1000&q=90"
+                    alt="Wildlife in a quiet forest"
                     loading="lazy"
                 >
-                <span>01 / THE LIVING WORLD</span>
-                <h3>Nature<br>& Life<span>↗</span></h3>
+
+                <div class="discovery-overlay"></div>
+
+                <div class="discovery-content">
+                    <span>01 / THE LIVING WORLD</span>
+                    <h3>Nature & Life <b>↗</b></h3>
+                </div>
+
             </a>
+
+
+            <!-- SCIENCE -->
 
             <a class="discovery-card science" href="#journal">
+
                 <img
-                    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=900&q=85"
-                    alt="Laboratory glassware"
+                    src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90"
+                    alt="Laboratory glassware and scientific research"
                     loading="lazy"
                 >
-                <span>02 / THE UNSEEN</span>
-                <h3>Science<br>& Discovery<span>↗</span></h3>
+
+                <div class="discovery-overlay"></div>
+
+                <div class="discovery-content">
+                    <span>02 / THE UNSEEN</span>
+                    <h3>Science & Discovery <b>↗</b></h3>
+                </div>
+
             </a>
+
+
+            <!-- SPACE -->
 
             <a class="discovery-card space" href="#journal">
+
                 <img
-                    src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=900&q=85"
-                    alt="A colourful nebula in space"
+                    src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1000&q=90"
+                    alt="Colourful nebula and distant stars"
                     loading="lazy"
                 >
-                <span>03 / BEYOND EARTH</span>
-                <h3>Space<br>& Cosmos<span>↗</span></h3>
+
+                <div class="discovery-overlay"></div>
+
+                <div class="discovery-content">
+                    <span>03 / BEYOND EARTH</span>
+                    <h3>Space & Cosmos <b>↗</b></h3>
+                </div>
+
             </a>
 
+
+            <!-- MIND -->
+
             <a class="discovery-card human" href="#journal">
+
                 <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=85"
-                    alt="A person looking across a mountain landscape"
+                    src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1000&q=90"
+                    alt="Scientific exploration of the human brain"
                     loading="lazy"
                 >
-                <span>04 / THE INNER WORLD</span>
-                <h3>Mind<br>& Humanity<span>↗</span></h3>
+
+                <div class="discovery-overlay"></div>
+
+                <div class="discovery-content">
+                    <span>04 / THE INNER WORLD</span>
+                    <h3>Mind & Humanity <b>↗</b></h3>
+                </div>
+
             </a>
 
         </div>
@@ -181,17 +265,45 @@
             <span>FIELD NOTES, IDEAS & OBSERVATIONS</span>
         </div>
 
+
         <div class="section-heading editorial-heading">
+
             <div>
                 <p class="eyebrow">CURRENTLY ON THE JOURNAL</p>
-                <h2>Stories worth<br>staying with.</h2>
+
+                <h2>
+                    Stories worth<br>
+                    staying with.
+                </h2>
             </div>
 
             <p class="section-description">
                 Not just what we know, but what we should
                 question, reconsider and understand.
             </p>
+
         </div>
+
+
+        <!-- JOURNAL FEATURE IMAGE -->
+
+        <div class="journal-feature-art">
+
+            <img
+                src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1400&q=90"
+                alt="A quiet forest filled with trees and natural textures"
+                loading="lazy"
+            >
+
+            <div class="journal-feature-caption">
+                <span>FIELD NOTES · OBSERVATIONS · DISCOVERIES</span>
+                <span>THE WORLD IS FULL OF STORIES.</span>
+            </div>
+
+        </div>
+
+
+        <!-- AUTOMATIC ARTICLE CARDS: DO NOT REMOVE THIS ID -->
 
         <div id="article-list">
             <p>New stories are on their way. Stay curious.</p>
@@ -220,20 +332,28 @@
     <section id="about" class="about-section editorial-about">
 
         <div class="about-image">
+
             <img
                 src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1000&q=85"
                 alt="An open notebook on a writing desk"
                 loading="lazy"
             >
 
-            <span class="about-image-caption">NOTES FROM THE EDITOR'S DESK</span>
+            <span class="about-image-caption">
+                NOTES FROM THE EDITOR'S DESK
+            </span>
+
         </div>
+
 
         <div class="about-content">
 
             <p class="eyebrow">03 / BEHIND THE HYPOTHESES</p>
 
-            <h2>One curious mind.<br>Endless questions.</h2>
+            <h2>
+                One curious mind.<br>
+                Endless questions.
+            </h2>
 
             <h3>I'm Akriti Charak.</h3>
 
@@ -270,20 +390,29 @@
 
     <!-- NEWSLETTER -->
 
-    <section class="newsletter-section editorial-newsletter" id="newsletter">
+    <section
+        class="newsletter-section editorial-newsletter"
+        id="newsletter"
+    >
 
         <p class="eyebrow">04 / LETTERS FROM THE JOURNAL</p>
 
-        <h2>A little wonder<br>in your inbox.</h2>
+        <h2>
+            A little wonder<br>
+            in your inbox.
+        </h2>
 
         <p>
             New stories, fascinating discoveries and occasional
             notes from the journal. No noise, just curiosity.
         </p>
 
+
         <form class="newsletter-form" id="newsletter-form">
 
-            <label for="subscriber-email">YOUR EMAIL ADDRESS</label>
+            <label for="subscriber-email">
+                YOUR EMAIL ADDRESS
+            </label>
 
             <div class="newsletter-input">
 
@@ -294,7 +423,9 @@
                     required
                 >
 
-                <button type="submit">Count me in ↗</button>
+                <button type="submit">
+                    Count me in ↗
+                </button>
 
             </div>
 
@@ -324,19 +455,29 @@
             <a href="#home">Back to top ↑</a>
             <a href="#journal">The Journal</a>
             <a href="#about">The Editor</a>
-            <a href="mailto:akriticharak9126@gmail.com">Get in touch ↗</a>
+            <a href="mailto:akriticharak9126@gmail.com">
+                Get in touch ↗
+            </a>
         </div>
 
     </div>
 
+
     <div class="footer-bottom">
+
         <span>WRITTEN AND CURATED BY AKRITI CHARAK.</span>
-        <span>© <span id="current-year"></span> HEARTBEATS & HYPOTHESES.</span>
+
+        <span>
+            © <span id="current-year"></span>
+            HEARTBEATS & HYPOTHESES.
+        </span>
+
     </div>
 
 </footer>
 
-<script src="script.js"></script>
+
+<script src="/script.js"></script>
 
 </body>
 </html>
